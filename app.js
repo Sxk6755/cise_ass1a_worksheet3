@@ -26,10 +26,10 @@ app.use('/api/books', books);
 const path = require("path");
 
 //Serving the build folder. This acts as the middleware.
-app.use(express.static(path.resolve(__dirname, "./mern-app/build")));
+app.use(express.static(path.resolve(__dirname, "./my-app/build")));
 
 app.get("*", function (request, response) {
-  response.sendFile(path.resolve(__dirname, "./mern-app/build", "index.html"));
+  response.sendFile(path.resolve(__dirname, "./my-app/build", "index.html"));
 });
 
 const port = process.env.PORT || 8082;
